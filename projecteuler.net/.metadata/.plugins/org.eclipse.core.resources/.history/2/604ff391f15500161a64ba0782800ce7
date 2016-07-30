@@ -1,0 +1,8 @@
+package archive;
+
+public class Problem2 {
+	
+	long totalSum = 0;
+	
+	long 
+}

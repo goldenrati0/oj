@@ -1,0 +1,23 @@
+package archive;
+
+import java.math.BigInteger;
+
+public class Problem3 {
+
+	public static void main(String[] args) {
+		
+		long x = Long.parseLong("9223372036854775807");
+	}
+	
+	public static boolean isPrime(long x){
+		
+		for(long i=2; i*i<=x; i++){
+			if(x%i == 0){
+				return false;
+			}
+		}
+		
+		return true;
+	}
+
+}

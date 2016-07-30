@@ -1,0 +1,19 @@
+package archive;
+
+public class Problem2 {
+	
+	long totalSum = 0;
+	
+	long current = 1;
+	long prev = 1;
+	long prevPrev = 0;
+	
+	while(current<=4000000){
+		
+		totalSum += current;
+		
+		prevPrev = prev;
+		prev = current;
+		current = prev + prevPrev;
+	}
+}
