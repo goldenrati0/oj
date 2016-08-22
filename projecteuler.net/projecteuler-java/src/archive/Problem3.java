@@ -4,11 +4,26 @@ import java.util.ArrayList;
 
 public class Problem3 {
 
-	public static boolean[] primeIndex = new boolean[(int) (Math.ceil(Math.sqrt(600851475143.00)))];
+    public static void main(String[] args) {
 
-	public static void main(String[] args) {
+        long x = 600851475143L;
+        long y = x;
+        long c = 2;
+        long fact = 0;
 
-		System.out.println(primeIndex.length);
-	}
+        while (c * c <= y) {
+            if (y % c == 0) {
+                y = y / c;
+                fact = c;
+            } else {
+                c++;
+            }
+        }
 
+        if (y > fact) { // the remainder is a prime number
+            fact = y;
+        }
+
+        System.out.println(fact);
+    }
 }
