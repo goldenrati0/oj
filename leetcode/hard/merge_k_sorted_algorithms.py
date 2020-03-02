@@ -4,6 +4,7 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Heap:
     numbers: List[int]
     size: int
@@ -64,7 +65,7 @@ class Solution:
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         if len(lists) == 0:
             return None
-        
+
         numbers = self.get_numbers(lists)
         minHeap = Heap()
         minHeap.build_heap(numbers)
